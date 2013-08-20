@@ -80,7 +80,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="TaskManagerTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\build\Infinity.vcxproj">
