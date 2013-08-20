@@ -36,5 +36,11 @@
     <ClInclude Include="..\source\Infinity\Engine.h">
       <Filter>source</Filter>
     </ClInclude>
+    <ClInclude Include="..\source\Infinity\Object.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Infinity\Actor.h">
+      <Filter>source</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

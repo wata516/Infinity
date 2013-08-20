@@ -15,8 +15,10 @@
     <ClCompile Include="..\source\Infinity\TaskManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\source\Infinity\Actor.h" />
     <ClInclude Include="..\source\Infinity\CpuDuration.h" />
     <ClInclude Include="..\source\Infinity\Engine.h" />
+    <ClInclude Include="..\source\Infinity\Object.h" />
     <ClInclude Include="..\source\Infinity\Task.h" />
     <ClInclude Include="..\source\Infinity\TaskManager.h" />
     <ClInclude Include="..\source\Infinity\ThreadConditionVariable.h" />
@@ -66,8 +68,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\boost\boost_1_54_0</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
