@@ -1,5 +1,6 @@
 #include "Engine.h"
 #include "TaskManager.h"
+#include "World.h"
 #include <thread>
 #include <memory>
 
@@ -8,6 +9,7 @@ namespace Infinity
 	class Engine::Impl
 	{
 		std::unique_ptr<TaskManager> mTicks;
+		std::unique_ptr<World> mWorld;
 
 		bool mLoop:1;
 	public:
@@ -29,6 +31,8 @@ namespace Infinity
 	bool Engine::Impl::Create(const Initialize &init)
 	{
 		mTicks.reset(new TaskManager(init.NumTaskThreads));
+		mWorld.reset(new World);
+		
 		return false;
 	}
 

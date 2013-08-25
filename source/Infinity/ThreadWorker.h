@@ -8,7 +8,7 @@ namespace Infinity {
 	{
 	public:
 		typedef Argment ArgmentType;
-		typedef std::function<bool(int, ArgmentType &)> TickFunc;
+		typedef std::function<bool(size_t, ArgmentType &)> TickFunc;
 
 	protected:
 		typedef ThreadPool<ThreadWorker<Argment>> TPool;

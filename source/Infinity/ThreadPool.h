@@ -58,6 +58,8 @@ namespace Infinity
 			mStatus[STATUS_STOP] = 1;
 		}
 
+		std::this_thread::sleep_for(std::chrono::seconds(1));
+
 		mWorkersCondition.NotifyAll();
 		for( auto &the : mWorkers ) {
 			the.join();

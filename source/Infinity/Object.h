@@ -6,10 +6,18 @@
 #include <boost/uuid/uuid_generators.hpp>
 #endif
 
+#include <unordered_map>
+#include <boost/type_traits/is_same.hpp>
+
 namespace Infinity
 {
 	class Object
 	{
+		static std::unordered_map<Object *,Object *> mObjects;
+
+	public:
+		Object();
+
 	public:
 		typedef Object Super;
 #if 0
@@ -22,9 +30,9 @@ namespace Infinity
 		Target* CastBase( int id )
 		{
 			if( Super::GetID() == id ) {
-				return (T*)this;
+				return (Target*)this;
 			}
-			if( boost::is_same<ThisType, ThisType::Super>::value ) {
+			if( boost::is_same<ThisType, typename ThisType::Super>::value ) {
 				return nullptr;
 			}
 			return CastBase<Target, ThisType::Super, Target::Super>(id);
@@ -42,15 +50,13 @@ namespace Infinity
 	private:
 #else
 
-#define OBJECT_DECLARE_BEGIN(MyType, ParentType)		\
-	class MyType : public ParentType {			\
+#define OBJECT_DECLARE_DECLARE(MyType, ParentType, TickGroup) \
 public:											\
 	typedef MyType ThisType;					\
 	typedef ParentType Super;					\
 	static int GetID() {return 1;}				\
 	template<class Target>						\
-	Target* Cast( ) { return CastBase<Target,ThisType,Super>(T::GetID()); } \
+	Target* Cast( ) { return CastBase<Target,ThisType,Super>(Target::GetID()); } \
 private:
 #endif
-#define OBJECT_DECLARE_END() }
 }

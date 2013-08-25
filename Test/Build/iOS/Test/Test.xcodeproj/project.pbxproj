@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE0D257917C8BCDD00D10CF2 /* libboost_unit_test_framework-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0D257817C8BCDD00D10CF2 /* libboost_unit_test_framework-mt.a */; };
+		BE0D259517C8C36400D10CF2 /* libInfinity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0D259417C8C36400D10CF2 /* libInfinity.a */; };
 		BEAABA6117C83871000D6148 /* Test.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = BEAABA6017C83871000D6148 /* Test.1 */; };
 		BEAABA6A17C838D3000D6148 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEAABA6917C838D3000D6148 /* main.cpp */; };
 /* End PBXBuildFile section */
@@ -25,6 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE0D257617C8BCBA00D10CF2 /* libboost_regex-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_regex-mt.a"; path = "../../../../../../../../opt/local/lib/libboost_regex-mt.a"; sourceTree = "<group>"; };
+		BE0D257817C8BCDD00D10CF2 /* libboost_unit_test_framework-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_unit_test_framework-mt.a"; path = "../../../../../../../../opt/local/lib/libboost_unit_test_framework-mt.a"; sourceTree = "<group>"; };
+		BE0D259417C8C36400D10CF2 /* libInfinity.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libInfinity.a; path = ../../../../build/iOS/DerivedData/Infinity/Build/Products/Debug/libInfinity.a; sourceTree = "<group>"; };
 		BEAABA5B17C83871000D6148 /* Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAABA6017C83871000D6148 /* Test.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Test.1; sourceTree = "<group>"; };
 		BEAABA6917C838D3000D6148 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../../main.cpp; sourceTree = "<group>"; };
@@ -35,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0D257917C8BCDD00D10CF2 /* libboost_unit_test_framework-mt.a in Frameworks */,
+				BE0D259517C8C36400D10CF2 /* libInfinity.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,9 @@
 		BEAABA5217C83871000D6148 = {
 			isa = PBXGroup;
 			children = (
+				BE0D259417C8C36400D10CF2 /* libInfinity.a */,
+				BE0D257817C8BCDD00D10CF2 /* libboost_unit_test_framework-mt.a */,
+				BE0D257617C8BCBA00D10CF2 /* libboost_regex-mt.a */,
 				BEAABA5D17C83871000D6148 /* Test */,
 				BEAABA5C17C83871000D6148 /* Products */,
 			);
@@ -151,6 +161,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /opt/local/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -178,6 +189,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /opt/local/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
@@ -186,14 +198,32 @@
 		BEAABA6517C83871000D6148 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					/Users/koichiro/Develop/Infinity/source,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/opt/local/lib,
+					"\"$(SRCROOT)/../../../../build/iOS/DerivedData/Infinity/Build/Products/Debug\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		BEAABA6617C83871000D6148 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					/Users/koichiro/Develop/Infinity/source,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/opt/local/lib,
+					"\"$(SRCROOT)/../../../../build/iOS/DerivedData/Infinity/Build/Products/Debug\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -216,6 +246,7 @@
 				BEAABA6617C83871000D6148 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

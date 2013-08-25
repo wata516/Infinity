@@ -6,8 +6,49 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BE0D256C17C8424600D10CF2 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0D256A17C8424600D10CF2 /* World.cpp */; };
+		BE0D256D17C8424600D10CF2 /* World.h in Headers */ = {isa = PBXBuildFile; fileRef = BE0D256B17C8424600D10CF2 /* World.h */; };
+		BE0D257017C8425F00D10CF2 /* Level.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0D256E17C8425F00D10CF2 /* Level.cpp */; };
+		BE0D257117C8425F00D10CF2 /* Level.h in Headers */ = {isa = PBXBuildFile; fileRef = BE0D256F17C8425F00D10CF2 /* Level.h */; };
+		BE0D259817C9D56B00D10CF2 /* ObjectManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0D259617C9D56B00D10CF2 /* ObjectManager.cpp */; };
+		BE0D259917C9D56B00D10CF2 /* ObjectManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BE0D259717C9D56B00D10CF2 /* ObjectManager.h */; };
+		BE0D259D17C9DA5E00D10CF2 /* SingletonMulti.h in Headers */ = {isa = PBXBuildFile; fileRef = BE0D259C17C9DA5E00D10CF2 /* SingletonMulti.h */; };
+		BEAABA7D17C83F28000D6148 /* Actor.h in Headers */ = {isa = PBXBuildFile; fileRef = BEAABA7217C83F28000D6148 /* Actor.h */; };
+		BEAABA7E17C83F28000D6148 /* CpuDuration.h in Headers */ = {isa = PBXBuildFile; fileRef = BEAABA7317C83F28000D6148 /* CpuDuration.h */; };
+		BEAABA7F17C83F28000D6148 /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEAABA7417C83F28000D6148 /* Engine.cpp */; };
+		BEAABA8017C83F28000D6148 /* Engine.h in Headers */ = {isa = PBXBuildFile; fileRef = BEAABA7517C83F28000D6148 /* Engine.h */; };
+		BEAABA8117C83F28000D6148 /* Object.h in Headers */ = {isa = PBXBuildFile; fileRef = BEAABA7617C83F28000D6148 /* Object.h */; };
+		BEAABA8217C83F28000D6148 /* Task.h in Headers */ = {isa = PBXBuildFile; fileRef = BEAABA7717C83F28000D6148 /* Task.h */; };
+		BEAABA8317C83F28000D6148 /* TaskManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEAABA7817C83F28000D6148 /* TaskManager.cpp */; };
+		BEAABA8417C83F28000D6148 /* TaskManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BEAABA7917C83F28000D6148 /* TaskManager.h */; };
+		BEAABA8517C83F28000D6148 /* ThreadConditionVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = BEAABA7A17C83F28000D6148 /* ThreadConditionVariable.h */; };
+		BEAABA8617C83F28000D6148 /* ThreadPool.h in Headers */ = {isa = PBXBuildFile; fileRef = BEAABA7B17C83F28000D6148 /* ThreadPool.h */; };
+		BEAABA8717C83F28000D6148 /* ThreadWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = BEAABA7C17C83F28000D6148 /* ThreadWorker.h */; };
+		BEBAE37D17CA53B400505D73 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEBAE37C17CA53B400505D73 /* Object.cpp */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		BE0D256A17C8424600D10CF2 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = World.cpp; path = ../../source/Infinity/World.cpp; sourceTree = "<group>"; };
+		BE0D256B17C8424600D10CF2 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = World.h; path = ../../source/Infinity/World.h; sourceTree = "<group>"; };
+		BE0D256E17C8425F00D10CF2 /* Level.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Level.cpp; path = ../../source/Infinity/Level.cpp; sourceTree = "<group>"; };
+		BE0D256F17C8425F00D10CF2 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level.h; path = ../../source/Infinity/Level.h; sourceTree = "<group>"; };
+		BE0D259617C9D56B00D10CF2 /* ObjectManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectManager.cpp; path = ../../source/Infinity/ObjectManager.cpp; sourceTree = "<group>"; };
+		BE0D259717C9D56B00D10CF2 /* ObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectManager.h; path = ../../source/Infinity/ObjectManager.h; sourceTree = "<group>"; };
+		BE0D259C17C9DA5E00D10CF2 /* SingletonMulti.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingletonMulti.h; path = ../../source/Infinity/SingletonMulti.h; sourceTree = "<group>"; };
 		BEAABA4B17C836CF000D6148 /* libInfinity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInfinity.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEAABA7217C83F28000D6148 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Actor.h; path = ../../source/Infinity/Actor.h; sourceTree = "<group>"; };
+		BEAABA7317C83F28000D6148 /* CpuDuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CpuDuration.h; path = ../../source/Infinity/CpuDuration.h; sourceTree = "<group>"; };
+		BEAABA7417C83F28000D6148 /* Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Engine.cpp; path = ../../source/Infinity/Engine.cpp; sourceTree = "<group>"; };
+		BEAABA7517C83F28000D6148 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Engine.h; path = ../../source/Infinity/Engine.h; sourceTree = "<group>"; };
+		BEAABA7617C83F28000D6148 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Object.h; path = ../../source/Infinity/Object.h; sourceTree = "<group>"; };
+		BEAABA7717C83F28000D6148 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = ../../source/Infinity/Task.h; sourceTree = "<group>"; };
+		BEAABA7817C83F28000D6148 /* TaskManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TaskManager.cpp; path = ../../source/Infinity/TaskManager.cpp; sourceTree = "<group>"; };
+		BEAABA7917C83F28000D6148 /* TaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskManager.h; path = ../../source/Infinity/TaskManager.h; sourceTree = "<group>"; };
+		BEAABA7A17C83F28000D6148 /* ThreadConditionVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadConditionVariable.h; path = ../../source/Infinity/ThreadConditionVariable.h; sourceTree = "<group>"; };
+		BEAABA7B17C83F28000D6148 /* ThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadPool.h; path = ../../source/Infinity/ThreadPool.h; sourceTree = "<group>"; };
+		BEAABA7C17C83F28000D6148 /* ThreadWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadWorker.h; path = ../../source/Infinity/ThreadWorker.h; sourceTree = "<group>"; };
+		BEBAE37C17CA53B400505D73 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Object.cpp; path = ../../source/Infinity/Object.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +65,7 @@
 		BEAABA4217C836CF000D6148 = {
 			isa = PBXGroup;
 			children = (
+				BEAABA7117C83F03000D6148 /* source */,
 				BEAABA4C17C836CF000D6148 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -36,6 +78,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BEAABA7117C83F03000D6148 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				BE0D259C17C9DA5E00D10CF2 /* SingletonMulti.h */,
+				BEAABA7217C83F28000D6148 /* Actor.h */,
+				BEAABA7317C83F28000D6148 /* CpuDuration.h */,
+				BEAABA7417C83F28000D6148 /* Engine.cpp */,
+				BEAABA7517C83F28000D6148 /* Engine.h */,
+				BEAABA7617C83F28000D6148 /* Object.h */,
+				BEBAE37C17CA53B400505D73 /* Object.cpp */,
+				BEAABA7717C83F28000D6148 /* Task.h */,
+				BEAABA7817C83F28000D6148 /* TaskManager.cpp */,
+				BEAABA7917C83F28000D6148 /* TaskManager.h */,
+				BEAABA7A17C83F28000D6148 /* ThreadConditionVariable.h */,
+				BEAABA7B17C83F28000D6148 /* ThreadPool.h */,
+				BEAABA7C17C83F28000D6148 /* ThreadWorker.h */,
+				BE0D256A17C8424600D10CF2 /* World.cpp */,
+				BE0D256B17C8424600D10CF2 /* World.h */,
+				BE0D256E17C8425F00D10CF2 /* Level.cpp */,
+				BE0D256F17C8425F00D10CF2 /* Level.h */,
+				BE0D259617C9D56B00D10CF2 /* ObjectManager.cpp */,
+				BE0D259717C9D56B00D10CF2 /* ObjectManager.h */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -43,6 +111,19 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEAABA7D17C83F28000D6148 /* Actor.h in Headers */,
+				BEAABA7E17C83F28000D6148 /* CpuDuration.h in Headers */,
+				BEAABA8017C83F28000D6148 /* Engine.h in Headers */,
+				BEAABA8117C83F28000D6148 /* Object.h in Headers */,
+				BEAABA8217C83F28000D6148 /* Task.h in Headers */,
+				BEAABA8417C83F28000D6148 /* TaskManager.h in Headers */,
+				BEAABA8517C83F28000D6148 /* ThreadConditionVariable.h in Headers */,
+				BEAABA8617C83F28000D6148 /* ThreadPool.h in Headers */,
+				BEAABA8717C83F28000D6148 /* ThreadWorker.h in Headers */,
+				BE0D256D17C8424600D10CF2 /* World.h in Headers */,
+				BE0D257117C8425F00D10CF2 /* Level.h in Headers */,
+				BE0D259917C9D56B00D10CF2 /* ObjectManager.h in Headers */,
+				BE0D259D17C9DA5E00D10CF2 /* SingletonMulti.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEAABA7F17C83F28000D6148 /* Engine.cpp in Sources */,
+				BEAABA8317C83F28000D6148 /* TaskManager.cpp in Sources */,
+				BE0D256C17C8424600D10CF2 /* World.cpp in Sources */,
+				BE0D257017C8425F00D10CF2 /* Level.cpp in Sources */,
+				BE0D259817C9D56B00D10CF2 /* ObjectManager.cpp in Sources */,
+				BEBAE37D17CA53B400505D73 /* Object.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = /opt/local/include;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -174,6 +262,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = /opt/local/include;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -197,6 +286,7 @@
 				BEAABA5117C836CF000D6148 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -5,6 +5,7 @@
 namespace Infinity
 {
 	class TaskManager;
+	class World;
 
 	class Engine
 	{

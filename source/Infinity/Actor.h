@@ -4,7 +4,8 @@
 
 namespace Infinity
 {
-	OBJECT_DECLARE_BEGIN(Actor,Object)
-
-	OBJECT_DECLARE_END();
+	class Actor : public Object
+	{
+		OBJECT_DECLARE_DECLARE(Actor,Object);
+	};
 }
