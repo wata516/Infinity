@@ -9,5 +9,8 @@
     <ClCompile Include="..\..\source\main.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\source\TaskManagerTest.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
