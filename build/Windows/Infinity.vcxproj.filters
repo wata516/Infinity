@@ -7,40 +7,64 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\source\Infinity\TaskManager.cpp">
+    <ClInclude Include="..\..\source\Infinity\Actor.h">
       <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\source\Infinity\Engine.cpp">
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\CpuDuration.h">
       <Filter>source</Filter>
-    </ClCompile>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\Engine.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\Level.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\Object.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\ObjectManager.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\SingletonMulti.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\Task.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\TaskManager.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\ThreadConditionVariable.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\ThreadPool.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\ThreadWorker.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\World.h">
+      <Filter>source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\source\Infinity\TaskManager.h">
+    <ClCompile Include="..\..\source\Infinity\Engine.cpp">
       <Filter>source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\source\Infinity\Task.h">
+    </ClCompile>
+    <ClCompile Include="..\..\source\Infinity\Level.cpp">
       <Filter>source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\source\Infinity\ThreadPool.h">
+    </ClCompile>
+    <ClCompile Include="..\..\source\Infinity\Object.cpp">
       <Filter>source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\source\Infinity\ThreadWorker.h">
+    </ClCompile>
+    <ClCompile Include="..\..\source\Infinity\ObjectManager.cpp">
       <Filter>source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\source\Infinity\CpuDuration.h">
+    </ClCompile>
+    <ClCompile Include="..\..\source\Infinity\TaskManager.cpp">
       <Filter>source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\source\Infinity\ThreadConditionVariable.h">
+    </ClCompile>
+    <ClCompile Include="..\..\source\Infinity\World.cpp">
       <Filter>source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\source\Infinity\Engine.h">
-      <Filter>source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\source\Infinity\Object.h">
-      <Filter>source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\source\Infinity\Actor.h">
-      <Filter>source</Filter>
-    </ClInclude>
+    </ClCompile>
   </ItemGroup>
 </Project>
