@@ -16,7 +16,6 @@
     <ClInclude Include="..\..\source\Infinity\Engine.h" />
     <ClInclude Include="..\..\source\Infinity\Level.h" />
     <ClInclude Include="..\..\source\Infinity\Object.h" />
-    <ClInclude Include="..\..\source\Infinity\ObjectManager.h" />
     <ClInclude Include="..\..\source\Infinity\SingletonMulti.h" />
     <ClInclude Include="..\..\source\Infinity\Task.h" />
     <ClInclude Include="..\..\source\Infinity\TaskManager.h" />
@@ -29,7 +28,7 @@
     <ClCompile Include="..\..\source\Infinity\Engine.cpp" />
     <ClCompile Include="..\..\source\Infinity\Level.cpp" />
     <ClCompile Include="..\..\source\Infinity\Object.cpp" />
-    <ClCompile Include="..\..\source\Infinity\ObjectManager.cpp" />
+    <ClCompile Include="..\..\source\Infinity\Task.cpp" />
     <ClCompile Include="..\..\source\Infinity\TaskManager.cpp" />
     <ClCompile Include="..\..\source\Infinity\World.cpp" />
   </ItemGroup>

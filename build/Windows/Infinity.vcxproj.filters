@@ -22,9 +22,6 @@
     <ClInclude Include="..\..\source\Infinity\Object.h">
       <Filter>source</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\source\Infinity\ObjectManager.h">
-      <Filter>source</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\source\Infinity\SingletonMulti.h">
       <Filter>source</Filter>
     </ClInclude>
@@ -57,13 +54,13 @@
     <ClCompile Include="..\..\source\Infinity\Object.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\source\Infinity\ObjectManager.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\source\Infinity\TaskManager.cpp">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\source\Infinity\World.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Infinity\Task.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

@@ -9,9 +9,10 @@ namespace Infinity
 	class Level;
 	class World : public Object
 	{
-		OBJECT_DECLARE_DECLARE(World,Object,TaskManager::GROUP_PARALLEL);
+		OBJECT_DECLARE_DECLARE(World,Object,TICKGROUP_PARALLEL);
 		
 		void Construct() {}
+		void Destruct() {}
 	public:
 		void AddLevel( );
 

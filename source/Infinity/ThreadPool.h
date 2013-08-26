@@ -18,6 +18,7 @@ namespace Infinity
 		std::chrono::milliseconds mRunDuration;
 		enum STATUS {
 			STATUS_STOP,
+			STATUS_DESTROY,
 			STATUS_MAX
 		};
 		std::bitset<STATUS_MAX> mStatus;
@@ -38,7 +39,11 @@ namespace Infinity
 
 	template<class Worker>
 	ThreadPool<Worker>::~ThreadPool( )
-	{ }
+	{
+		if(mStatus[STATUS_DESTROY]==0) {
+			Destroy();
+		}
+	}
 
 	template<class Worker>
 	void ThreadPool<Worker>::Run() {
@@ -65,6 +70,7 @@ namespace Infinity
 			the.join();
 		}
 
+		mStatus[STATUS_DESTROY] = 1;
 	}
 
 }

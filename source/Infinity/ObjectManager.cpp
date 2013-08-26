@@ -1,17 +1,22 @@
-//
-//  TickManager.cpp
-//  Infinity
-//
-//  Created by Koichiro on 2013/08/25.
-//  Copyright (c) 2013年 Koichiro. All rights reserved.
-//
-
 #include "ObjectManager.h"
+#include <mutex>
 
 namespace Infinity
 {
-	ObjectManager::ObjectManager(size_t threadnum)
+	std::unordered_map<Object *,Object *> ObjectManager::mObjects;
+
+	void ObjectManager::RegisterObjects(Object *obj)
 	{
-		mTasks.reset(new TaskManager(threadnum));
+		std::mutex m;
+		std::lock_guard<std::mutex> lock(m);
+		mObjects.insert(std::make_pair(obj, obj));
 	}
+
+	void ObjectManager::UnRegisterObjects(Object *obj)
+	{
+		std::mutex m;
+		std::lock_guard<std::mutex> lock(m);
+		mObjects.erase(obj);
+	}
+
 }

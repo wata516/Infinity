@@ -1,31 +1,28 @@
 #include "Object.h"
-#include <mutex>
+#include "TaskManager.h"
 
 namespace Infinity
 {
-	std::unordered_map<Object *,Object *> Object::mObjects;
-
-	void Object::RegisterObjects(Object *obj)
-	{
-		std::mutex m;
-		std::lock_guard<std::mutex> lock(m);
-		mObjects.insert(std::make_pair(obj, obj));
-	}
-
-	void Object::UnRegisterObjects(Object *obj)
-	{
-		std::mutex m;
-		std::lock_guard<std::mutex> lock(m);
-		mObjects.insert(std::make_pair(obj, obj));
-	}
-
 	Object::Object()
+		: mName("Object")
+		, mTickGroup( TICKGROUP_MAX )
 	{
-		RegisterObjects(this);
 	}
 
 	Object::~Object()
 	{
-		UnRegisterObjects(this);
+	}
+
+	void Object::Create(const std::string &name, TICKGROUP group)
+	{
+		std::lock_guard<std::mutex> lock(mMutex);
+		mName = name;
+		mTickGroup = group;
+	}
+
+	bool Object::IsCreate()
+	{
+		std::lock_guard<std::mutex> lock(mMutex);
+		return mTickGroup != TICKGROUP_MAX;
 	}
 }

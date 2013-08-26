@@ -6,24 +6,32 @@
 #include <array>
 #include <memory>
 #include <condition_variable>
-
+#include <stdio.h>
 namespace Infinity {
 
+	std::array<TaskManager::ValueType,Object::TICKGROUP_MAX> TaskManager::mTasks;
+	std::mutex TaskManager::mTaskMutex;
+
+	void TaskManager::RegistTask(Object*obj)
+	{
+		mTasks[obj->GetTickGroup()].insert(std::make_pair(obj,obj));
+	}
+
 	struct TaskTickArgment{
-		std::vector<Infinity::Task*> *mTasks;
-		std::vector<Infinity::Task*>::iterator mIterator;
+		std::mutex mtx;
+		TaskManager::ValueType *mTasks;
+		TaskManager::ValueType::iterator mIterator;
 	};
 
 	struct TaskTickFunction {
 		bool operator()(int id, TaskTickArgment &argment) {
-			Infinity::Task *task = nullptr;
+			Infinity::Object *task = nullptr;
 			{
-				std::mutex mtx;
-				std::lock_guard<std::mutex> lock(mtx);
+				std::lock_guard<std::mutex> lock(argment.mtx);
 				if( argment.mIterator == argment.mTasks->end() ) {
 					return false;
 				}
-				task = *(argment.mIterator);
+				task = (argment.mIterator)->second;
 				++ argment.mIterator;
 			}
 			task->Tick();
@@ -34,7 +42,6 @@ namespace Infinity {
 
 	class TaskManager::Impl {
 		std::unique_ptr< std::thread > mWorker;
-		std::array< std::vector< Infinity::Task * >, TaskManager::GROUP_MAX > mTasks;
 		std::unique_ptr<ThreadPool<ThreadWorker<TaskTickArgment>>> mWorkers;
 		TaskTickArgment mWorkArgment;
 
@@ -42,7 +49,6 @@ namespace Infinity {
 		Impl(size_t threadnum);
 		void Tick();
 		void Destroy();
-		void AddBack(TaskManager::GROUP &group, Task *task);
 	};
 
 	TaskManager::Impl::Impl(size_t threadnum) 
@@ -52,11 +58,16 @@ namespace Infinity {
 
 	void TaskManager::Impl::Tick()
 	{
-		mWorkArgment.mTasks = &mTasks[TaskManager::GROUP::GROUP_PARALLEL];
-		mWorkArgment.mIterator = mTasks[TaskManager::GROUP::GROUP_PARALLEL].begin();
-		mWorkers->Run();
-		for( auto *x : mTasks[ TaskManager::GROUP::GROUP_SINGLE ] ) {
-			x->Tick();
+		{
+			std::lock_guard<std::mutex> lock(mTaskMutex);
+			mWorkArgment.mTasks = &mTasks[Object::TICKGROUP_PARALLEL];
+			mWorkArgment.mIterator = mTasks[Object::TICKGROUP_PARALLEL].begin();
+			mWorkers->Run();
+		}
+
+		TaskManager::ValueType &single = mTasks[ Object::TICKGROUP_SINGLE ];
+		for( std::pair<Object*const,Object*> &x : single ) {
+			x.second->Tick();
 		}
 	}
 
@@ -65,20 +76,12 @@ namespace Infinity {
 		mWorkers->Destroy();
 	}
 
-	void TaskManager::Impl::AddBack(TaskManager::GROUP &group, Task *task)
-	{
-		mTasks[group].push_back(task);
-	}
-
 	TaskManager::TaskManager(size_t threadnum)
 		: mImpl(new Impl(threadnum))
 	{}
 
 	TaskManager::~TaskManager()
 	{}
-
-	void TaskManager::AddBack(GROUP group, Task *task)
-	{ mImpl->AddBack(group,task); }
 
 	void TaskManager::Tick()
 	{ mImpl->Tick(); }
