@@ -6,6 +6,7 @@
 #include <boost/uuid/uuid_generators.hpp>
 #endif
 
+#include <string>
 #include <unordered_map>
 #include <boost/type_traits/is_same.hpp>
 
@@ -15,8 +16,13 @@ namespace Infinity
 	{
 		static std::unordered_map<Object *,Object *> mObjects;
 
+		static void RegisterObjects(Object *obj);
+		static void UnRegisterObjects(Object *obj);
+		std::string mName;
+
 	public:
 		Object();
+		~Object();
 
 	public:
 		typedef Object Super;
@@ -37,6 +43,8 @@ namespace Infinity
 			}
 			return CastBase<Target, ThisType::Super, Target::Super>(id);
 		}
+
+		void SetName( const std::string &name ) { mName = name; }
 	};
 #if 0	//compile error vs2012.
 	#define OBJECT_DECLARE(MyType, ParentType)		\
@@ -57,6 +65,9 @@ public:											\
 	static int GetID() {return 1;}				\
 	template<class Target>						\
 	Target* Cast( ) { return CastBase<Target,ThisType,Super>(Target::GetID()); } \
+	MyType() { \
+		SetName(#MyType); \
+	} \
 private:
 #endif
 }

@@ -5,10 +5,27 @@ namespace Infinity
 {
 	std::unordered_map<Object *,Object *> Object::mObjects;
 
-	Object::Object()
+	void Object::RegisterObjects(Object *obj)
 	{
 		std::mutex m;
 		std::lock_guard<std::mutex> lock(m);
-		mObjects.insert(std::make_pair(this, this));
+		mObjects.insert(std::make_pair(obj, obj));
+	}
+
+	void Object::UnRegisterObjects(Object *obj)
+	{
+		std::mutex m;
+		std::lock_guard<std::mutex> lock(m);
+		mObjects.insert(std::make_pair(obj, obj));
+	}
+
+	Object::Object()
+	{
+		RegisterObjects(this);
+	}
+
+	Object::~Object()
+	{
+		UnRegisterObjects(this);
 	}
 }
