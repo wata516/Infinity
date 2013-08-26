@@ -1,21 +1,3 @@
-//
-//  Test case for Google Test
-//
-#include <gtest/gtest.h>
-
-int add(int x, int y)
-{
-	// do nothing.
-	return x + y;
-}
-
-// 1 + 1 の結果は 2 になるはず（..だけど、このコードは失敗する）
-TEST(AddTest, Test1)
-{
-	ASSERT_EQ(2, add(1, 1));
-}
-#if 0
-#define GTEST_HAS_TR1_TUPLE 0
 #include <gtest/gtest.h>
 
 #include <Infinity/TaskManager.h>
@@ -46,4 +28,10 @@ TEST(AddTest, Test1 )
 
 	ASSERT_EQ(2, 2);
 }
-#endif
+
+GTEST_API_ int main(int argc, char **argv) {
+	std::cout << "Running main() from gtest_main.cc\n";
+
+	testing::InitGoogleTest(&argc, argv);
+	return RUN_ALL_TESTS();
+}
