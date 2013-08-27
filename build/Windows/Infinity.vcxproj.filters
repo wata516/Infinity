@@ -5,6 +5,12 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="source\Renderer">
+      <UniqueIdentifier>{e51a7224-74f7-4c27-8612-915edb38833d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Editor">
+      <UniqueIdentifier>{c82aed73-29e0-4968-9685-98ab411f67b7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\source\Infinity\Actor.h">
@@ -43,6 +49,12 @@
     <ClInclude Include="..\..\source\Infinity\World.h">
       <Filter>source</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\Renderer\IRenderer.h">
+      <Filter>source\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\Editor\MainFrame.h">
+      <Filter>source\Editor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\Infinity\Engine.cpp">
@@ -62,6 +74,9 @@
     </ClCompile>
     <ClCompile Include="..\..\source\Infinity\Task.cpp">
       <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Infinity\Editor\MainFrame.cpp">
+      <Filter>source\Editor</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

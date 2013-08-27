@@ -52,7 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\external\wxWidgets-2.9.5\include\msvc;..\..\external\wxWidgets-2.9.5\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\external\wxWidgets-2.9.5\include\msvc;..\..\external\wxWidgets-2.9.5\include;..\..\source</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -84,11 +84,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\source\Infinity\Editor\main.cpp" />
-    <ClCompile Include="..\..\source\Infinity\Editor\MainFrame.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\source\Infinity\Editor\MainFrame.h" />
+    <ClCompile Include="..\..\source\InfinityEditor\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
