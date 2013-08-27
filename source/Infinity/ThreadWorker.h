@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ThreadPool.h"
+#include <Infinity/ThreadPool.h>
 
 namespace Infinity {
 	template<class Argment>

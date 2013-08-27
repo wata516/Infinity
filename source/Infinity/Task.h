@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Object.h"
+#include <Infinity/Object.h>
 
 namespace Infinity
 {

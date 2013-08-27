@@ -1,4 +1,5 @@
-#include "MainFrame.h"
+#include <Infinity/Editor/MainFrame.h>
+
 namespace Infinity
 {
 	namespace Editor

@@ -1,5 +1,4 @@
-#include "Task.h"
-#include "TaskManager.h"
+#include <Infinity/Task.h>
 #include <mutex>
 
 namespace Infinity

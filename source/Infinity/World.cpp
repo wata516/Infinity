@@ -1,5 +1,5 @@
-#include "World.h"
-#include "Level.h"
+#include <Infinity/World.h>
+#include <Infinity/Level.h>
 
 namespace Infinity
 {

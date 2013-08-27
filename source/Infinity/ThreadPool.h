@@ -1,7 +1,7 @@
 #pragma once
 
-#include "ThreadConditionVariable.h"
-#include "CpuDuration.h"
+#include <Infinity/ThreadConditionVariable.h>
+#include <Infinity/CpuDuration.h>
 #include <list>
 #include <thread>
 #include <bitset>

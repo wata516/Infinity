@@ -1,5 +1,5 @@
 #pragma once
-#include "Object.h"
+#include <Infinity/Object.h>
 
 #include <memory>
 #include <array>

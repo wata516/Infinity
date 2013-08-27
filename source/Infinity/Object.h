@@ -1,11 +1,5 @@
 #pragma once
 
-#if 0	//compile error vs2012.
-#include <boost/uuid/uuid.hpp>
-#include <boost/uuid/uuid_io.hpp>
-#include <boost/uuid/uuid_generators.hpp>
-#endif
-
 #include <string>
 #include <mutex>
 #include <unordered_map>

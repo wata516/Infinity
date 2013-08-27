@@ -1,5 +1,5 @@
-#include "Object.h"
-#include "TaskManager.h"
+#include <Infinity/Object.h>
+#include <Infinity/TaskManager.h>
 
 namespace Infinity
 {

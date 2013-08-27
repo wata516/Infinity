@@ -1,12 +1,13 @@
-﻿#include "TaskManager.h"
-#include "Task.h"
-#include "ThreadWorker.h"
+﻿#include <Infinity/TaskManager.h>
+#include <Infinity/Task.h>
+#include <Infinity/ThreadWorker.h>
 #include <thread>
 #include <vector>
 #include <array>
 #include <memory>
 #include <condition_variable>
 #include <stdio.h>
+
 namespace Infinity {
 
 	std::array<TaskManager::ValueType,Object::TICKGROUP_MAX> TaskManager::mTasks;
