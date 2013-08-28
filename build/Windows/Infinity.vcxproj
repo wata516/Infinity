@@ -14,10 +14,15 @@
     <ClInclude Include="..\..\source\Infinity\Actor.h" />
     <ClInclude Include="..\..\source\Infinity\CpuDuration.h" />
     <ClInclude Include="..\..\source\Infinity\Editor\MainFrame.h" />
+    <ClInclude Include="..\..\source\Infinity\Editor\MainPanel.h" />
     <ClInclude Include="..\..\source\Infinity\Engine.h" />
     <ClInclude Include="..\..\source\Infinity\Level.h" />
     <ClInclude Include="..\..\source\Infinity\Object.h" />
     <ClInclude Include="..\..\source\Infinity\Renderer\IRenderer.h" />
+    <ClInclude Include="..\..\source\Infinity\Renderer\ISurface.h" />
+    <ClInclude Include="..\..\source\Infinity\Renderer\RendererFactory.h" />
+    <ClInclude Include="..\..\source\Infinity\Renderer\SDL\SDLRenderer.h" />
+    <ClInclude Include="..\..\source\Infinity\Renderer\SDL\SDLSurface.h" />
     <ClInclude Include="..\..\source\Infinity\SingletonMulti.h" />
     <ClInclude Include="..\..\source\Infinity\Task.h" />
     <ClInclude Include="..\..\source\Infinity\TaskManager.h" />
@@ -28,9 +33,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\Infinity\Editor\MainFrame.cpp" />
+    <ClCompile Include="..\..\source\Infinity\Editor\MainPanel.cpp" />
     <ClCompile Include="..\..\source\Infinity\Engine.cpp" />
     <ClCompile Include="..\..\source\Infinity\Level.cpp" />
     <ClCompile Include="..\..\source\Infinity\Object.cpp" />
+    <ClCompile Include="..\..\source\Infinity\Renderer\RendererFactory.cpp" />
+    <ClCompile Include="..\..\source\Infinity\Renderer\SDL\SDLRenderer.cpp" />
+    <ClCompile Include="..\..\source\Infinity\Renderer\SDL\SDLSurface.cpp" />
     <ClCompile Include="..\..\source\Infinity\Task.cpp" />
     <ClCompile Include="..\..\source\Infinity\TaskManager.cpp" />
     <ClCompile Include="..\..\source\Infinity\World.cpp" />
@@ -78,7 +87,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\boost\boost_1_54_0;..\..\external\wxWidgets-2.9.5\include\msvc;..\..\external\wxWidgets-2.9.5\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\boost\boost_1_54_0;..\..\external\wxWidgets-2.9.5\include\msvc;..\..\external\wxWidgets-2.9.5\include;..\..\source;..\..\external\SDL2-2.0.0\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

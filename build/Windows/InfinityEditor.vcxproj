@@ -57,8 +57,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\external\wxWidgets-2.9.5\lib\vc_lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>wxbase29ud.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\external\wxWidgets-2.9.5\lib\vc_lib;..\..\external\SDL2-2.0.0\VisualC\SDL\win32\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>wxbase29ud.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -85,6 +85,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\InfinityEditor\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\external\SDL2-2.0.0\VisualC\SDL\Win32\Debug\SDL2.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

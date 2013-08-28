@@ -11,6 +11,9 @@
     <Filter Include="source\Editor">
       <UniqueIdentifier>{c82aed73-29e0-4968-9685-98ab411f67b7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\Renderer\SDL">
+      <UniqueIdentifier>{1ff7ab56-c067-4113-93f7-0395e15601f8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\source\Infinity\Actor.h">
@@ -55,6 +58,21 @@
     <ClInclude Include="..\..\source\Infinity\Editor\MainFrame.h">
       <Filter>source\Editor</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\Renderer\RendererFactory.h">
+      <Filter>source\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\Renderer\ISurface.h">
+      <Filter>source\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\Editor\MainPanel.h">
+      <Filter>source\Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\Renderer\SDL\SDLRenderer.h">
+      <Filter>source\Renderer\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\Renderer\SDL\SDLSurface.h">
+      <Filter>source\Renderer\SDL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\Infinity\Engine.cpp">
@@ -77,6 +95,18 @@
     </ClCompile>
     <ClCompile Include="..\..\source\Infinity\Editor\MainFrame.cpp">
       <Filter>source\Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Infinity\Renderer\RendererFactory.cpp">
+      <Filter>source\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Infinity\Editor\MainPanel.cpp">
+      <Filter>source\Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Infinity\Renderer\SDL\SDLRenderer.cpp">
+      <Filter>source\Renderer\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Infinity\Renderer\SDL\SDLSurface.cpp">
+      <Filter>source\Renderer\SDL</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

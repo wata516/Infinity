@@ -1,10 +1,12 @@
 #include <wx/wx.h>
 #include "Infinity/Editor/MainFrame.h"
+#include "Infinity/Editor/MainPanel.h"
 
 namespace InfinityEditor
 {
 	class MyApp: public wxApp
 	{
+		Infinity::Editor::MainFrame *mFrame;
 	public:
 		virtual bool OnInit();
 	};
@@ -13,9 +15,10 @@ namespace InfinityEditor
 
 	bool MyApp::OnInit()
 	{
-		Infinity::Editor::MainFrame *frame = new Infinity::Editor::MainFrame( _(""), wxDefaultPosition, wxSize(900, 700) );
-		frame->Show(true);
-		SetTopWindow(frame);
+		mFrame = new Infinity::Editor::MainFrame( _(""), wxDefaultPosition, wxSize(900,700));
+		mFrame->Show(true);
+		SetTopWindow(mFrame);
 		return true;
 	}
+
 }

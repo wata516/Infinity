@@ -31,5 +31,11 @@ namespace Infinity
 
 			return true;
 		}
+
+		void RendererFactory::Destroy( IRenderer **ppRenderer )
+		{
+			delete *ppRenderer;
+			*ppRenderer = nullptr;
+		}
 	}
 }

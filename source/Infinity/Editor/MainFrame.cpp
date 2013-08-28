@@ -1,4 +1,8 @@
 #include <Infinity/Editor/MainFrame.h>
+#include <Infinity/Editor/MainPanel.h>
+
+#include <Infinity/Renderer/IRenderer.h>
+#include <Infinity/Renderer/RendererFactory.h>
 
 namespace Infinity
 {
@@ -21,10 +25,17 @@ namespace Infinity
 
 			CreateStatusBar();
 			SetStatusText( _("") );
+
+			Infinity::Renderer::RendererFactory::Create("SDL",&mRenderer);
+			mMainPanel.reset(new Infinity::Editor::MainPanel(this, mRenderer->CreateSurface(size.GetWidth(),size.GetHeight())));
+
 		}
 
 		void MainFrame::OnQuit(wxCommandEvent& WXUNUSED(event))
 		{
+			mMainPanel.reset();
+			mRenderer->Destroy();
+			Infinity::Renderer::RendererFactory::Destroy(&mRenderer);
 			Close(true);
 		}
 

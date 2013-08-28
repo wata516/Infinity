@@ -19,4 +19,7 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\external\SDL2-2.0.0\VisualC\SDL\Win32\Debug\SDL2.dll" />
+  </ItemGroup>
 </Project>
