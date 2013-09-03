@@ -16,8 +16,8 @@ namespace InfinityEditor
 	bool MyApp::OnInit()
 	{
 		mFrame = new Infinity::Editor::MainFrame( _(""), wxDefaultPosition, wxSize(900,700));
-		mFrame->Show(true);
-		SetTopWindow(mFrame);
+		mFrame->get()->Show(true);
+		SetTopWindow(mFrame->get());
 		return true;
 	}
 

@@ -73,6 +73,9 @@
     <ClInclude Include="..\..\source\Infinity\Renderer\SDL\SDLSurface.h">
       <Filter>source\Renderer\SDL</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\source\Infinity\Editor\GSGFrame.h">
+      <Filter>source\Editor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\Infinity\Engine.cpp">
@@ -107,6 +110,9 @@
     </ClCompile>
     <ClCompile Include="..\..\source\Infinity\Renderer\SDL\SDLSurface.cpp">
       <Filter>source\Renderer\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Infinity\Editor\GSGFrame.cpp">
+      <Filter>source\Editor</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

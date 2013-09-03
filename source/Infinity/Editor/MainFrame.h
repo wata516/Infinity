@@ -5,31 +5,18 @@
 
 namespace Infinity
 {
-	namespace Renderer
-	{
-		class IRenderer;
-	}
-
 	namespace Editor
 	{
-		class MainPanel;
-		class MainFrame: public wxFrame
+		class MainFrame
 		{
-			enum
-			{
-				ID_Quit = 1,
-				ID_About,
-			};
-			Infinity::Renderer::IRenderer *mRenderer;
-			std::unique_ptr<Infinity::Editor::MainPanel> mMainPanel;
-
 		public:
 			MainFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
+			virtual ~MainFrame();
 
-			void OnQuit(wxCommandEvent& event);
-			void OnAbout(wxCommandEvent& event);
-
-			DECLARE_EVENT_TABLE()
+			wxFrame *get();
+		private:
+			class Impl;
+			std::unique_ptr<Impl> mImpl;
 		};
 	}
 }
