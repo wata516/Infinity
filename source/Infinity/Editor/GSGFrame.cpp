@@ -1,4 +1,5 @@
 #include <Infinity/Editor/GSGFrame.h>
+#include "wx/wxsf/wxShapeFramework.h"
 
 namespace Infinity
 {
@@ -6,6 +7,11 @@ namespace Infinity
 	{
 		class GSGFrame::Impl : public wxFrame
 		{
+			// create wxSF diagram manager
+			wxSFDiagramManager m_Manager;
+			// create pointer to wxSF shape canvas
+			wxSFShapeCanvas* m_pCanvas;
+
 		public:
 			Impl(const wxString& title, const wxPoint& pos, const wxSize& size);
 			virtual ~Impl();
